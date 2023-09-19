@@ -1,7 +1,6 @@
 --****PLEASE ENTER YOUR DETAILS BELOW****
 --cgh_queries.sql
 
---Student ID:30391113
 --Student Name:An Ju
 --Tutorial No: 07
 

@@ -1,5 +1,4 @@
 /*
-Student ID:30391113
 Student Name: An JU
 Assignment 1 C1
 */
