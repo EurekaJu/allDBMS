@@ -1,0 +1,153 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A46F5B8D-C4B7-08A0-3707-AE663E391506" name="MEMBER_ATTENDANCE">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>183E552D-2AEA-F3F6-C555-D14DA3310851</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="payment_date" id="5E0586E3-B38B-070F-7732-E55E58ED8E6A">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date the member make the payment]]></commentInRDBMS>
+<generatorID>2F453C8B-345F-EEEC-73FD-E35CA0B4D9AC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="memberatd_total" id="A9314153-DBDA-7FDE-D43F-DA2C8C382CA0">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the member's total attendance of the class]]></commentInRDBMS>
+<generatorID>CF97D2C8-64EA-E6EE-FE43-D5B00B9D16C5</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id" id="78DEC0FD-F9A5-4A67-67AD-ADA6516AE7C4">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>9C241A66-648A-C208-CD43-F2D20D0CF305</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A4B2B488-DE6C-9AE0-265D-7E826E2025C0" referredColumn="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86"/>
+</associations>
+</Column>
+<Column name="class_no" id="8C46F6C3-5A61-671C-EF61-456BB0B83014">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number of the class in the center]]></commentInRDBMS>
+<generatorID>A8636E87-4EA5-8944-747D-A091B739FF04</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2B582DF-E56A-2689-7E77-CB11C5A033E1" referredColumn="720418DD-6009-D337-3058-72CCC485440B"/>
+</associations>
+</Column>
+<Column name="center_id" id="A99520CF-F29D-B82A-B080-55E4B41B5952">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>7CA991FD-3AAC-57F8-2239-EC32CEEBAB57</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A2B582DF-E56A-2689-7E77-CB11C5A033E1" referredColumn="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0"/>
+</associations>
+</Column>
+<Column name="memberatd_no" id="D12A113F-2A30-4254-FB1E-EC73A5C9F6B1">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance report number (surrogate key)]]></commentInRDBMS>
+<generatorID>97AF439C-1C9A-B7B4-DCCF-2352C90602AA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8DAEC0C6-0CA0-E9BE-D547-0F321D31F985" name="MEMBER_ATTENDANCE_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>5CCBCCD2-FB10-0332-5E29-99175BF6619D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D12A113F-2A30-4254-FB1E-EC73A5C9F6B1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="000B5BD0-174F-4CB5-9D6E-44E66AF088F4" name="MEMBER_ATTENDANCE_NK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>7521296F-5562-2781-0205-43AF9E1E752E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5E0586E3-B38B-070F-7732-E55E58ED8E6A"/>
+<colUsage columnID="A9314153-DBDA-7FDE-D43F-DA2C8C382CA0"/>
+<colUsage columnID="78DEC0FD-F9A5-4A67-67AD-ADA6516AE7C4"/>
+<colUsage columnID="8C46F6C3-5A61-671C-EF61-456BB0B83014"/>
+<colUsage columnID="A99520CF-F29D-B82A-B080-55E4B41B5952"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="215E6ABA-E5F6-2777-9FB5-802598A663CA" name="MEMBER_ATTENDANCE_CLASS">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>F167F32F-CF7D-CB8C-1952-4518B24F799B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C46F6C3-5A61-671C-EF61-456BB0B83014"/>
+<colUsage columnID="A99520CF-F29D-B82A-B080-55E4B41B5952"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D2A445FF-2FC5-FCF5-C290-01B279A7121C" name="MEMBER_ATTENDANCE_MEMBER">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>2F426726-671B-D2D3-46DB-6D3D9F000930</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="78DEC0FD-F9A5-4A67-67AD-ADA6516AE7C4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

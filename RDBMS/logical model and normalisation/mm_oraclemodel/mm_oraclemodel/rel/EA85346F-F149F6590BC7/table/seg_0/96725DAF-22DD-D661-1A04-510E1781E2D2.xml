@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="96725DAF-22DD-D661-1A04-510E1781E2D2" name="CENTER">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>07B7F76E-452F-DD06-6099-FFE10B1BDCA0</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="center_id" id="A4533529-7D99-42B1-E18A-C997700CFE54">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>7E5FFEA5-8FD4-9E6C-11FC-B497E45E925D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="center_name" id="6942B1DB-4E07-8991-58E7-F679182EB5F7">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[center name]]></commentInRDBMS>
+<generatorID>F9701959-CD6A-AD5D-8230-5CF482195795</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="center_phone" id="54AEB7ED-E782-CD45-0CEC-E8E4DCBABE91">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>93259D82-AC97-9BBB-C341-613D03ED599D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="center_street" id="B2DE0FD5-9B32-5339-A20B-E88B937B9517">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[street of the center]]></commentInRDBMS>
+<generatorID>BE95C1A5-7A8C-2421-FA71-CAF418F64E6B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="center_town" id="8C1C0E60-5F75-45AC-6352-116DA0C4674A">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[town of the center]]></commentInRDBMS>
+<generatorID>EDA5B381-C09E-6149-19D0-45714EBD07D5</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="center_post" id="A811491C-4310-0E19-B77F-D6862F4BB422">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[postcode of the center]]></commentInRDBMS>
+<generatorID>F3D59FA6-52A6-7E16-0133-30CC9A2C2F6C</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1EA54E11-FE5B-C790-D1BE-8E0F120CE91C" name="CENTER_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>727D73A6-C001-85AA-F7CC-EBE49BBE1792</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4533529-7D99-42B1-E18A-C997700CFE54"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

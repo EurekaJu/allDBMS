@@ -1,0 +1,452 @@
+SQL> 
+SQL> /*
+SQL>    Q1
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon
+SQL> -- (;) at the end of this answer
+SQL> SELECT
+  2      doctor_title,
+  3      doctor_fname,
+  4      doctor_lname,
+  5      doctor_phone
+  6  FROM
+  7      (
+  8          (
+  9                   cgh.doctor d
+ 10              JOIN cgh.doctor_speciality    ds
+ 11              ON d.doctor_id = ds.doctor_id
+ 12          )
+ 13          JOIN cgh.speciality           s
+ 14          ON ds.spec_code = s.spec_code
+ 15      )
+ 16  WHERE
+ 17      s.spec_description = 'Orthopedic surgery'
+ 18  ORDER BY
+ 19      doctor_lname,
+ 20      doctor_fname;
+
+DO DOCTOR_FNAME                                       DOCTOR_LNAME                                       DOCTOR_PHO
+-- -------------------------------------------------- -------------------------------------------------- ----------
+Mr Graham                                             Brown                                              1234567899
+Dr Robert                                             Lu                                                 1515141312
+Dr Juixan                                             Wei                                                6622544311
+Dr Mary                                               Wei                                                6655443377
+
+SQL> 
+SQL> /*
+SQL>    Q2
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      item_code,
+  3      item_description,
+  4      item_stock,
+  5      cc_title
+  6  FROM
+  7           cgh.item i
+  8      JOIN cgh.costcentre c
+  9      ON i.cc_code = c.cc_code
+ 10  WHERE
+ 11          item_stock > 50
+ 12      AND item_description LIKE '%Disposable%'
+ 13  ORDER BY
+ 14      item_code;
+
+ITEM_ ITEM_DESCRIPTION                                                                                     ITEM_STOCK CC_TITLE                                          
+----- ---------------------------------------------------------------------------------------------------- ---------- --------------------------------------------------
+ST252 Sigmoidoscope Tube Heine Disposable 25s 250x20mm                                                            100 Laboratory Supplies                               
+TN010 Thermometer Nextemp Disposable                                                                              500 Laboratory Supplies                               
+
+SQL> 
+SQL> /*
+SQL>    Q3
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      p.patient_id,
+  3      CASE
+  4          WHEN patient_fname IS NULL THEN
+  5              patient_lname
+  6          ELSE
+  7              patient_fname
+  8              || ' '
+  9              || patient_lname
+ 10      END                                                      AS "Patient Name",
+ 11      to_char(adm_date_time, 'DD/MON/YYYY HH12:MI:SS AM')      AS adm_date_time,
+ 12      CASE
+ 13          WHEN doctor_fname IS NULL THEN
+ 14              doctor_title
+ 15              || '. '
+ 16              || doctor_lname
+ 17          ELSE
+ 18              doctor_title
+ 19              || '. '
+ 20              || doctor_fname
+ 21              || ' '
+ 22              || doctor_lname
+ 23      END                                                      AS "Doctor Name"
+ 24  FROM
+ 25      (
+ 26               cgh.doctor d
+ 27          JOIN cgh.admission    a
+ 28          ON d.doctor_id = a.doctor_id
+ 29      )
+ 30      JOIN cgh.patient      p
+ 31      ON a.patient_id = p.patient_id
+ 32  WHERE
+ 33      adm_date_time BETWEEN TO_DATE('11/SEP/2021 10:00:00 AM', 'DD/MON/YYYY HH12:MI:SS AM')
+ 34      AND TO_DATE('14/SEP/2021 06:00:00 PM', 'DD/MON/YYYY HH12:MI:SS AM')
+ 35  ORDER BY
+ 36      adm_date_time;
+
+PATIENT_ID Patient Name                                                                                          ADM_DATE_TIME                    Doctor Name                                                                                              
+---------- ----------------------------------------------------------------------------------------------------- -------------------------------- ---------------------------------------------------------------------------------------------------------
+    100114 Florri MacGillespie                                                                                   11/SEP/2021 10:00:00 AM          Dr. Tedi Jeeves                                                                                          
+    100118 Carita Edscer                                                                                         13/SEP/2021 01:00:00 PM          Mr. Erich Argabrite                                                                                      
+    100116 Matthai                                                                                               13/SEP/2021 10:00:00 AM          Mr. Erich Argabrite                                                                                      
+    100110 Abra Baltzar                                                                                          14/SEP/2021 10:00:00 AM          Mr. Digman                                                                                               
+
+SQL> /*
+SQL>    Q4
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      proc_code,
+  3      proc_name,
+  4      proc_description,
+  5      to_char(proc_std_cost, '$9999.99') AS proc_std_cost
+  6  FROM
+  7      cgh.procedure
+  8  WHERE
+  9      proc_std_cost < (
+ 10          SELECT
+ 11              AVG(proc_std_cost)
+ 12          FROM
+ 13              cgh.procedure
+ 14      )
+ 15  ORDER BY
+ 16      proc_std_cost DESC;
+
+ PROC_CODE PROC_NAME                                                                                            PROC_DESCRIPTION                                                                                                                                                                                                                                                                                             PROC_STD_
+---------- ---------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------
+     43114 Heart surgery                                                                                        Insertion of a pacemaker                                                                                                                                                                                                                                                                                       $120.66
+     29844 Tonsillectomy                                                                                        Removal of tonsils                                                                                                                                                                                                                                                                                             $109.28
+     23432 Mental health                                                                                        Counselling for children                                                                                                                                                                                                                                                                                        $98.00
+     32266 Hemoglobin concentration                                                                             Measuring oxygen carrying protein in blood                                                                                                                                                                                                                                                                      $76.00
+     15510 X-ray, Left knee                                                                                     Left knee Bi-Lateral 2D Scan                                                                                                                                                                                                                                                                                    $75.00
+     15509 X-ray, Right knee                                                                                    Right knee Bi-Lateral 2D Scan                                                                                                                                                                                                                                                                                   $75.00
+     33335 Eye test                                                                                             Test for eye problems                                                                                                                                                                                                                                                                                           $70.45
+     19887 Colonoscopy                                                                                          Bowel examination                                                                                                                                                                                                                                                                                               $68.00
+     71432 Genetic testing                                                                                      Screening for genetically carried diseases                                                                                                                                                                                                                                                                      $65.20
+     40099 Scratch test                                                                                         Allergy test on skin surface                                                                                                                                                                                                                                                                                    $40.00
+     40100 Skin surgery                                                                                         Removal of mole                                                                                                                                                                                                                                                                                                 $33.50
+
+ PROC_CODE PROC_NAME                                                                                            PROC_DESCRIPTION                                                                                                                                                                                                                                                                                             PROC_STD_
+---------- ---------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------
+     65554 Blood screen                                                                                         Full blood test                                                                                                                                                                                                                                                                                                 $30.00
+
+12 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>    Q5
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      p.patient_id,
+  3      patient_lname,
+  4      patient_fname,
+  5      to_char(patient_dob, 'dd/MON/yyyy')       AS patient_dob,
+  6      COUNT(adm_no)                            AS adm_times
+  7  FROM
+  8           cgh.patient p
+  9      JOIN cgh.admission a
+ 10      ON p.patient_id = a.patient_id
+ 11  GROUP BY
+ 12      p.patient_id,
+ 13      patient_lname,
+ 14      patient_fname,
+ 15      patient_dob
+ 16  HAVING
+ 17      COUNT(adm_no) > 2
+ 18  ORDER BY
+ 19      adm_times DESC,
+ 20      patient_dob;
+
+PATIENT_ID PATIENT_LNAME                                      PATIENT_FNAME                                      PATIENT_DOB           ADM_TIMES
+---------- -------------------------------------------------- -------------------------------------------------- -------------------- ----------
+    100118 Edscer                                             Carita                                             06/DEC/1994                   4
+    102345 Lee                                                Wendy                                              25/MAY/1981                   4
+    100128 Coskerry                                           June                                               16/AUG/1992                   3
+    100114 MacGillespie                                       Florri                                             22/OCT/1992                   3
+
+SQL> 
+SQL> /*
+SQL>    Q6
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> 
+SQL> SELECT
+  2      adm_no,
+  3      p.patient_id,
+  4      patient_fname,
+  5      patient_lname,
+  6      CASE
+  7          WHEN to_number(adm_discharge - adm_date_time) - floor(to_number(adm_discharge -
+  8          adm_date_time)) = 0 THEN
+  9              to_char(floor(to_number(adm_discharge - adm_date_time)))
+ 10              || ' days'
+ 11          ELSE
+ 12              to_char(floor(to_number(adm_discharge - adm_date_time)))
+ 13              || ' days '
+ 14              || to_char((to_number(adm_discharge - adm_date_time) - floor(to_number(adm_discharge -
+ 15              adm_date_time))) * 24,
+ 16                         '99.9')
+ 17              || ' hrs'
+ 18      END AS hospital_times
+ 19  FROM
+ 20           cgh.admission a
+ 21      JOIN cgh.patient p
+ 22      ON a.patient_id = p.patient_id
+ 23  WHERE
+ 24      adm_discharge IS NOT NULL
+ 25      AND to_char(adm_discharge - adm_date_time) > (
+ 26          SELECT
+ 27              AVG(adm_discharge - adm_date_time)
+ 28          FROM
+ 29              cgh.admission
+ 30          WHERE
+ 31              adm_discharge IS NOT NULL
+ 32      )
+ 33  ORDER BY
+ 34      patient_dob;
+
+    ADM_NO PATIENT_ID PATIENT_FNAME                                      PATIENT_LNAME                                      HOSPITAL_TIMES                                         
+---------- ---------- -------------------------------------------------- -------------------------------------------------- -------------------------------------------------------
+    100070     100140 Gwenora                                            Culter                                             7 days                                                 
+    100230     100140 Gwenora                                            Culter                                             14 days   3.0 hrs                                      
+    100190     100116                                                    Matthai                                            13 days   1.0 hrs                                      
+    100080     100152 Neils                                              Gravatt                                            15 days                                                
+    100100     100187 Sebastien                                          Bodsworth                                          10 days   3.0 hrs                                      
+    100120     100175 Doralin                                            O'Brogane                                          10 days   2.0 hrs                                      
+    100010     100110 Abra                                               Baltzar                                            7 days   3.0 hrs                                       
+    100050     100118 Carita                                             Edscer                                             8 days   3.0 hrs                                       
+    100200     100118 Carita                                             Edscer                                             12 days  22.0 hrs                                      
+
+9 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>    Q7
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      pr.proc_code,
+  3      proc_name,
+  4      proc_description,
+  5      proc_time,
+  6      to_char(proc_std_cost, '$9999.00') AS proc_std_cost,
+  7      to_char(AVG(adprc_pat_cost) - proc_std_cost, '9999.99') AS proc_price_diff
+  8  FROM
+  9           cgh.procedure pr
+ 10      JOIN cgh.adm_prc ap
+ 11      ON pr.proc_code = ap.proc_code
+ 12  WHERE
+ 13      perform_dr_id IS NOT NULL
+ 14  GROUP BY
+ 15      pr.proc_code,
+ 16      proc_name,
+ 17      proc_description,
+ 18      proc_time,
+ 19      proc_std_cost
+ 20  ORDER BY
+ 21      proc_code;
+
+ PROC_CODE PROC_NAME                                                                                            PROC_DESCRIPTION                                                                                                                                                                                                                                                                                              PROC_TIME PROC_STD_ PROC_PRI
+---------- ---------------------------------------------------------------------------------------------------- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------- --------- --------
+     43114 Heart surgery                                                                                        Insertion of a pacemaker                                                                                                                                                                                                                                                                                             45   $120.66    14.67
+     43556 Vascular surgery                                                                                     Removel of varicose veins                                                                                                                                                                                                                                                                                           120   $243.10     6.90
+     49518 Total replacement, Right knee                                                                        Right knee replacement by artificial joint                                                                                                                                                                                                                                                                          180   $350.00    13.12
+     54132 Plastic surgery                                                                                      Burn surgery to repair skin                                                                                                                                                                                                                                                                                         170   $244.00    56.00
+     65554 Blood screen                                                                                         Full blood test                                                                                                                                                                                                                                                                                                      10    $30.00      .00
+
+SQL> 
+SQL> select * from table(dbms_xplan.display_cursor(sql_id=>'1zd61pq4q1b9z', format=>'ALLSTATS LAST'));
+
+PLAN_TABLE_OUTPUT                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+User has no SELECT privilege on V$SQL
+
+SQL> 
+SQL> 
+SQL> /*
+SQL>    Q8
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      p.proc_code,
+  3      proc_name,
+  4      CASE
+  5          WHEN i.item_code IS NULL THEN
+  6              '---'
+  7          ELSE
+  8              i.item_code
+  9      END  AS item_code,
+ 10      CASE
+ 11          WHEN item_description IS NULL THEN
+ 12              '---'
+ 13          ELSE
+ 14              item_description
+ 15      END  AS item_description,
+ 16      CASE
+ 17          WHEN MAX(to_char(it_qty_used)) IS NULL THEN
+ 18              '---'
+ 19          ELSE
+ 20              MAX(to_char(it_qty_used))
+ 21      END  AS it_qty_used
+ 22  FROM
+ 23      cgh.procedure         p
+ 24      LEFT OUTER JOIN (
+ 25          (
+ 26                   cgh.adm_prc ap
+ 27              JOIN cgh.item_treatment    it
+ 28              ON ap.adprc_no = it.adprc_no
+ 29          )
+ 30          JOIN cgh.item              i
+ 31          ON it.item_code = i.item_code
+ 32      )
+ 33      ON p.proc_code = ap.proc_code
+ 34  GROUP BY
+ 35      p.proc_code,
+ 36      proc_name,
+ 37      i.item_code,
+ 38      item_description
+ 39  ORDER BY
+ 40      proc_name,
+ 41      item_code;
+
+ PROC_CODE PROC_NAME                                                                                            ITEM_ ITEM_DESCRIPTION                                                                                     IT_QTY_USED                             
+---------- ---------------------------------------------------------------------------------------------------- ----- ---------------------------------------------------------------------------------------------------- ----------------------------------------
+     43111 Angiogram                                                                                            ---   ---                                                                                                  ---                                     
+     12055 Appendectomy                                                                                         ---   ---                                                                                                  ---                                     
+     65554 Blood screen                                                                                         OV001 Interlink Vial Access Cannula                                                                        1                                       
+     17122 Childbirth                                                                                           ---   ---                                                                                                  ---                                     
+     19887 Colonoscopy                                                                                          ---   ---                                                                                                  ---                                     
+     27459 Corneal replacement                                                                                  ---   ---                                                                                                  ---                                     
+     33335 Eye test                                                                                             ---   ---                                                                                                  ---                                     
+     71432 Genetic testing                                                                                      ---   ---                                                                                                  ---                                     
+     43114 Heart surgery                                                                                        AN002 Std Anaesthetic Pack                                                                                 1                                       
+     43114 Heart surgery                                                                                        AP050 Amethocaine 0.5% 20s Prev Tetracaine 0.5%                                                            1                                       
+     43114 Heart surgery                                                                                        OV001 Interlink Vial Access Cannula                                                                        2                                       
+
+ PROC_CODE PROC_NAME                                                                                            ITEM_ ITEM_DESCRIPTION                                                                                     IT_QTY_USED                             
+---------- ---------------------------------------------------------------------------------------------------- ----- ---------------------------------------------------------------------------------------------------- ----------------------------------------
+     32266 Hemoglobin concentration                                                                             ---   ---                                                                                                  ---                                     
+     15511 MRI                                                                                                  ---   ---                                                                                                  ---                                     
+     23432 Mental health                                                                                        ---   ---                                                                                                  ---                                     
+     54132 Plastic surgery                                                                                      AN002 Std Anaesthetic Pack                                                                                 1                                       
+     54132 Plastic surgery                                                                                      BI500 Bupivacaine Inj .5% 10ml Steriamp                                                                    1                                       
+     54132 Plastic surgery                                                                                      CA002 Catheter i.V. Optiva 22g X 25mm                                                                      1                                       
+     40099 Scratch test                                                                                         ---   ---                                                                                                  ---                                     
+     40100 Skin surgery                                                                                         ---   ---                                                                                                  ---                                     
+     43112 Thoracic surgery                                                                                     ---   ---                                                                                                  ---                                     
+     29844 Tonsillectomy                                                                                        ---   ---                                                                                                  ---                                     
+     49518 Total replacement, Right knee                                                                        AN002 Std Anaesthetic Pack                                                                                 1                                       
+
+ PROC_CODE PROC_NAME                                                                                            ITEM_ ITEM_DESCRIPTION                                                                                     IT_QTY_USED                             
+---------- ---------------------------------------------------------------------------------------------------- ----- ---------------------------------------------------------------------------------------------------- ----------------------------------------
+     49518 Total replacement, Right knee                                                                        KN056 Right Knee Brace                                                                                     1                                       
+     49518 Total replacement, Right knee                                                                        SS006 Stainless Steel Pins                                                                                 4                                       
+     43556 Vascular surgery                                                                                     AN002 Std Anaesthetic Pack                                                                                 1                                       
+     43556 Vascular surgery                                                                                     BI500 Bupivacaine Inj .5% 10ml Steriamp                                                                    2                                       
+     15510 X-ray, Left knee                                                                                     ---   ---                                                                                                  ---                                     
+     15509 X-ray, Right knee                                                                                    ---   ---                                                                                                  ---                                     
+
+28 rows selected. 
+
+SQL> 
+SQL> /*
+SQL>    Q9a (FIT2094 only) or Q9b (FIT3171 only)
+SQL>*/
+SQL> -- PLEASE PLACE REQUIRED SQL STATEMENT FOR THIS PART HERE
+SQL> -- ENSURE that your query is formatted and has a semicolon (;)
+SQL> -- at the end of this answer
+SQL> SELECT
+  2      p.proc_code,
+  3      proc_name,
+  4      CASE
+  5          WHEN perform_dr_id IS NULL THEN
+  6              '----'
+  7          ELSE
+  8              to_char(perform_dr_id)
+  9      END                                                          AS perform_dr_id,
+ 10      CASE
+ 11          WHEN doctor_fname IS NULL
+ 12               AND doctor_lname IS NULL THEN
+ 13              'Technician'
+ 14          ELSE
+ 15              CASE
+ 16                  WHEN doctor_fname IS NULL THEN
+ 17                          doctor_title
+ 18                          || '. '
+ 19                          || doctor_lname
+ 20                  ELSE
+ 21                      doctor_title
+ 22                      || '. '
+ 23                      || doctor_fname
+ 24                      || ' '
+ 25                      || doctor_lname
+ 26              END
+ 27      END                                                          AS "Doctor Name",
+ 28      to_char(MAX(to_char(adprc_pat_cost)), '$9999.99')             AS adprc_pat_cost
+ 29  FROM
+ 30      (
+ 31               cgh.procedure p
+ 32          JOIN cgh.adm_prc    ap
+ 33          ON p.proc_code = ap.proc_code
+ 34      )
+ 35      LEFT OUTER JOIN cgh.doctor     d
+ 36      ON ap.perform_dr_id = d.doctor_id
+ 37  GROUP BY
+ 38      p.proc_code,
+ 39      proc_name,
+ 40      perform_dr_id,
+ 41      doctor_id,
+ 42      doctor_fname,
+ 43      doctor_lname,
+ 44      doctor_title
+ 45  ORDER BY
+ 46      p.proc_code,
+ 47      d.doctor_id;
+
+ PROC_CODE PROC_NAME                                                                                            PERFORM_DR_ID                            Doctor Name                                                                                               ADPRC_PAT
+---------- ---------------------------------------------------------------------------------------------------- ---------------------------------------- --------------------------------------------------------------------------------------------------------- ---------
+     15509 X-ray, Right knee                                                                                    ----                                     Technician                                                                                                   $75.00
+     32266 Hemoglobin concentration                                                                             ----                                     Technician                                                                                                   $80.00
+     43114 Heart surgery                                                                                        1005                                     Mr. Erich Argabrite                                                                                         $150.00
+     43556 Vascular surgery                                                                                     1005                                     Mr. Erich Argabrite                                                                                         $250.00
+     49518 Total replacement, Right knee                                                                        1298                                     Mr. Graham Brown                                                                                            $350.00
+     49518 Total replacement, Right knee                                                                        7890                                     Dr. Mary Wei                                                                                                $400.00
+     54132 Plastic surgery                                                                                      1084                                     Ms. Rollie Whayman                                                                                          $300.00
+     65554 Blood screen                                                                                         1061                                     Mr. Digman                                                                                                   $30.00
+     65554 Blood screen                                                                                         ----                                     Technician                                                                                                   $35.00
+
+9 rows selected. 
+
+SQL> 
+SQL> spool off

@@ -1,0 +1,155 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B344A7D9-5FB8-CDD1-E4C1-D2ACEFE134D6" name="STAFF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:09:36 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="staff_id" id="F11218D9-6A71-BB52-B1C1-35FA8C3B882D">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:10:01 UTC</createdTime>
+<commentInRDBMS><![CDATA[the id number of the staff]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_fname" id="FE20FEE1-A955-7807-838B-846100D4B4BE">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:10:36 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff's first name]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_lname" id="8D165114-F796-6033-C17E-E2CE83EA9A09">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:11:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[staff's last name]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_phone" id="1F00E00A-FC48-56D6-DE63-52D54E26CA26">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:11:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[phone number of the staff]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_date" id="0DA084F0-E45F-6B4C-A5BF-23629878C140">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:11:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date the staff started at the center]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_role" id="0DD98BB4-D80C-EE89-1038-9E1C9B617882">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:12:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[Administration (A) Cleaner (C) Instructor Dry (D) Instructor Pool (P) Manager (only one per centre) (M) Sales (S) Security (T)]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<constraintName>chk_staff_role</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<listOfValues>
+<valueDef value="A" description="Administration"/>
+<valueDef value="C" description="Cleaner"/>
+<valueDef value="D" description="Instructor Dry"/>
+<valueDef value="M" description="Manager (only one per centre)"/>
+<valueDef value="P" description="Instructor PooL"/>
+<valueDef value="S" description="Sales"/>
+<valueDef value="T" description="Security"/>
+</listOfValues>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="staff_faid" id="3C150FEA-29EE-D3AB-EF6E-A1DA18945485">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:13:58 UTC</createdTime>
+<commentInRDBMS><![CDATA[whether the staff is first aid certified]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="center_id" id="FB6DEB35-365F-2329-BC42-465A9905E701">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:24:32 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>8691B04F-87F1-44F5-CDE7-C6BF07611343</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>7E5FFEA5-8FD4-9E6C-11FC-B497E45E925D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="11C0DA89-74C4-5E8D-B412-3AEA33AB1221" name="STAFF PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:10:13 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F11218D9-6A71-BB52-B1C1-35FA8C3B882D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

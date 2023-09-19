@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2BB8B3E2-1556-4D0E-9F59-BC635272CAA0" name="ASSESSMENT">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>B77C6CB3-56DD-3534-58D6-8F672EA844EE</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="member_id" id="57BAB29E-A2B2-F3F3-EB81-75651E6B9FDB">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>29991D21-28D1-2738-BBD4-5AE39C5A8DC7</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="07762016-C1A0-DDB7-20F5-2828928BF64C" referredColumn="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86"/>
+</associations>
+</Column>
+<Column name="assess_date" id="448396B0-2F1F-81BA-7641-E597EBBBE18E">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date member take the assessment]]></commentInRDBMS>
+<generatorID>B135318D-33D6-BC9E-8361-CA7657BA48DF</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assess_weight" id="5A90C0AC-5D93-9DEC-90D3-86588E545CF8">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's weight in kg]]></commentInRDBMS>
+<generatorID>0814764D-824E-729C-2488-C9E4E2FD9092</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assess_blood" id="AB733A21-198D-7AB1-650B-2B2DA6AB00EB">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the blood pressure of the member]]></commentInRDBMS>
+<generatorID>13158D46-AFD6-2C75-170B-D947CAF52BE4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assess_bmi" id="5A275157-A8A8-5771-81D4-68ADDE32041E">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the bmi record of the member]]></commentInRDBMS>
+<generatorID>F94A6C15-BB90-829F-7D19-F97E3021E532</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="assess_vo" id="2FD7AB9C-DB66-8A61-5238-8455EF59804C">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the VO2Max record of the member]]></commentInRDBMS>
+<generatorID>B0B5D8B7-6D5B-2E08-3E9F-3F2ABE852DD3</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DB8073F8-C51B-0C63-EB94-2A424C1D74BB" name="ASSESSMENT_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>D537F3DA-0FAF-59C4-9A55-9E907C28B479</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="448396B0-2F1F-81BA-7641-E597EBBBE18E"/>
+<colUsage columnID="57BAB29E-A2B2-F3F3-EB81-75651E6B9FDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="496F6059-87EB-446C-C9D0-44B14C7A60D7" name="MEMBER_ASSESSMENT">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>14377B30-11A2-0D71-D9DD-59E50433078B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="57BAB29E-A2B2-F3F3-EB81-75651E6B9FDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

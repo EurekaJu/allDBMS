@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MEMBER_ATTENDANCE_CLASS" directorySegmentName="seg_0" id="F167F32F-CF7D-CB8C-1952-4518B24F799B">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:50:35 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<sourcePk>5CCBCCD2-FB10-0332-5E29-99175BF6619D</sourcePk>
+<targetPk>4D595A38-7153-B5F5-20C5-575922EED0CE</targetPk>
+<identifying>false</identifying>
+<nameOnSource>record</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>183E552D-2AEA-F3F6-C555-D14DA3310851</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>541211D0-172A-C06D-8EA0-573B01F2A396</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

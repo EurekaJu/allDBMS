@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="MEMBER_ATTENDANCE_SEESION" directorySegmentName="seg_0" id="EE6A4011-575E-DCC2-5E3E-0744C77C0640">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:49:26 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<sourcePk>5CCBCCD2-FB10-0332-5E29-99175BF6619D</sourcePk>
+<identifying>true</identifying>
+<nameOnSource>count</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>183E552D-2AEA-F3F6-C555-D14DA3310851</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>52BBB3D6-FDC3-E61D-8A90-726EE31EC9BC</targetEntity>
+<transferable>true</transferable>
+</Relation>

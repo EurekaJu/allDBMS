@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F72A8B50-E5ED-015B-C6E8-AB1DEC8F7066" name="FACILITY">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:29:27 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="center_id" id="9D5706DA-8555-EEBF-9F07-BB7C4F951CDB">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:17:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>6D2D89FC-BC38-CABC-1FB7-48032F3D8AC4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>7E5FFEA5-8FD4-9E6C-11FC-B497E45E925D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="facility_no" id="4855A625-FFD3-3ABA-8016-A968586575B1">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:31:05 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility room number]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="facility_name" id="EFD103FD-5FEC-80E9-A1C4-04825EFECF16">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:31:30 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility name]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="facility_desc" id="C6616696-116E-4D96-7CF7-063E058678D6">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:31:59 UTC</createdTime>
+<commentInRDBMS><![CDATA[the description of the facility]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="facility_capa" id="3B399BAC-0174-B113-48D8-862BB9AE3286">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:32:28 UTC</createdTime>
+<commentInRDBMS><![CDATA[the number of participants it can accommodate]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7BC83E9A-6B9A-B810-F2DF-A126C5F697F7" name="FACILITY PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:30:03 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4855A625-FFD3-3ABA-8016-A968586575B1</attributeRef>
+<attributeRef>9D5706DA-8555-EEBF-9F07-BB7C4F951CDB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

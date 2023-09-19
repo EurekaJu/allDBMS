@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="183E552D-2AEA-F3F6-C555-D14DA3310851" name="MEMBER_ATTENDANCE">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:55:35 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="payment_date" id="2F453C8B-345F-EEEC-73FD-E35CA0B4D9AC">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:56:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date the member make the payment]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="memberatd_total" id="CF97D2C8-64EA-E6EE-FE43-D5B00B9D16C5">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:57:10 UTC</createdTime>
+<commentInRDBMS><![CDATA[the member's total attendance of the class]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="member_id" id="9C241A66-648A-C208-CD43-F2D20D0CF305">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:48:31 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>2F426726-671B-D2D3-46DB-6D3D9F000930</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>415EF037-D049-92CF-7518-73617BB34FCD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_no" id="A8636E87-4EA5-8944-747D-A091B739FF04">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:51:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number of the class in the center]]></commentInRDBMS>
+<generatorID>F167F32F-CF7D-CB8C-1952-4518B24F799B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>795E7C9F-5CEA-DCA4-0C80-E570256D9782</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="center_id" id="7CA991FD-3AAC-57F8-2239-EC32CEEBAB57">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:51:11 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>F167F32F-CF7D-CB8C-1952-4518B24F799B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>F1668E97-C226-8F0A-A98E-C9E8EB56605A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="memberatd_no" id="97AF439C-1C9A-B7B4-DCCF-2352C90602AA">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:52:16 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance report number (surrogate key)]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5CCBCCD2-FB10-0332-5E29-99175BF6619D" name="MEMBER_ATTENDANCE PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:55:54 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>97AF439C-1C9A-B7B4-DCCF-2352C90602AA</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="7521296F-5562-2781-0205-43AF9E1E752E" name="MEMBER_ATTENDANCE NK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:53:45 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<newElementsIDs>2F453C8B-345F-EEEC-73FD-E35CA0B4D9AC,CF97D2C8-64EA-E6EE-FE43-D5B00B9D16C5,2F426726-671B-D2D3-46DB-6D3D9F000930,F167F32F-CF7D-CB8C-1952-4518B24F799B</newElementsIDs>
+<usedAttributes>
+<attributeRef>2F453C8B-345F-EEEC-73FD-E35CA0B4D9AC</attributeRef>
+<attributeRef>CF97D2C8-64EA-E6EE-FE43-D5B00B9D16C5</attributeRef>
+<attributeRef>9C241A66-648A-C208-CD43-F2D20D0CF305</attributeRef>
+<attributeRef>A8636E87-4EA5-8944-747D-A091B739FF04</attributeRef>
+<attributeRef>7CA991FD-3AAC-57F8-2239-EC32CEEBAB57</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,225 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5916F224-6C5F-B5DF-7554-901EE461D6C2" name="CLASS">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<generatorID>541211D0-172A-C06D-8EA0-573B01F2A396</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="center_id" id="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>F1668E97-C226-8F0A-A98E-C9E8EB56605A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81AA1379-8E65-6A01-B392-17C264F2F117" referredColumn="A4533529-7D99-42B1-E18A-C997700CFE54"/>
+</associations>
+</Column>
+<Column name="class_no" id="720418DD-6009-D337-3058-72CCC485440B">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number of the class in the center]]></commentInRDBMS>
+<generatorID>795E7C9F-5CEA-DCA4-0C80-E570256D9782</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_start" id="36378C95-3B3E-90C4-C6EC-0595F8CE242B">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[start date and time of the class]]></commentInRDBMS>
+<generatorID>647C9D85-2D87-9792-B619-DB99BE1A30B2</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_cost" id="878A0EA8-1DDB-22C0-E7BA-D1C23C53F082">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the cost of the class]]></commentInRDBMS>
+<generatorID>B47D0EC4-2080-5341-5855-C316E59D1BCD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_maxno" id="2AC50090-DC88-341D-726F-BF71D42EA29B">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:49 UTC</createdTime>
+<commentInRDBMS><![CDATA[the maximum number of the people attend this class]]></commentInRDBMS>
+<generatorID>95070354-3D28-5380-F8A4-7FEB5E7513CD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_sessno" id="998FB82F-B3F3-71D2-9F9D-D1AA0B040918">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the session number of the class]]></commentInRDBMS>
+<generatorID>EC888672-D70F-F6A8-3AA7-80A6DB0DE72A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_desc" id="8E2F3159-C3FF-3E3E-9BC6-064EEE1E1F9B">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[Class decription]]></commentInRDBMS>
+<generatorID>139CE689-E908-4161-F1D6-29820ECAAAAB</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>70</dataTypeSize>
+<ownDataTypeParameters>70,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_type" id="5839A107-706C-A2E1-BA35-29AD92001F0A">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the type of the class]]></commentInRDBMS>
+<generatorID>B902348F-97A8-F258-44F8-5BB4D54E33E8</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_gender" id="3D53AB78-3922-AE51-C22E-45864E74A363">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[whether this class is gender specific 'M' for male 'F' for female 'M' for unrestricted]]></commentInRDBMS>
+<generatorID>B1A39727-A964-C207-5E94-69DA300CD337</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<constraintName>chk_class_gender</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<listOfValues>
+<valueDef value="F" description="Female"/>
+<valueDef value="M" description="Male"/>
+<valueDef value="N" description="Unrestriced"/>
+</listOfValues>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_mins" id="C62A58C4-48A4-0B48-DF4C-FF492EDB910C">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the duration of the class]]></commentInRDBMS>
+<generatorID>EFDC7767-3503-B049-F6A0-1A680EE54B02</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facility_no" id="F94EC481-0F22-0D02-79EE-635731E4819E">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility room number]]></commentInRDBMS>
+<generatorID>682161B0-29F6-08AF-6E7E-3F40925AFB2C</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D309FA8C-5BA1-A2CE-F5EB-12303DFF7A93" referredColumn="641DF116-6B06-C07D-DFAA-DBF5CFE2B99A"/>
+</associations>
+</Column>
+<Column name="center_id2" id="9F082676-45F3-259F-D024-6061E5B18235">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>BBB725DB-F9C1-7764-C343-B9C77FE1EE56</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D309FA8C-5BA1-A2CE-F5EB-12303DFF7A93" referredColumn="F4AF72D6-73E2-4BF5-E87A-39DA08E9E670"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52F5565A-D3AA-A2D9-88C3-2515D488281A" name="CLASS_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>4D595A38-7153-B5F5-20C5-575922EED0CE</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="720418DD-6009-D337-3058-72CCC485440B"/>
+<colUsage columnID="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="481989A6-9DE6-3205-D734-F2A6C1BC405F" name="CENTER_CLASS">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>D052F4EE-F71B-BE63-911F-84003314C5D2</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E7E58BAD-0259-BCC7-E2C1-D67850B46471" name="FACILITY">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>2242F128-9AA0-844F-3588-0187E4897841</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F94EC481-0F22-0D02-79EE-635731E4819E"/>
+<colUsage columnID="9F082676-45F3-259F-D024-6061E5B18235"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,94 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CEC3AD11-3563-F2C5-9E7E-871470BC7E69" name="STAFF_CLASS">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="staff_id" id="05ACCA94-B42F-CD7D-1AF2-8359FFB96161">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE1E7535-1C4A-D5C1-F316-759DA2B7C24B" referredColumn="591B7E7E-67E8-C199-8877-41C7C7212C75"/>
+</associations>
+</Column>
+<Column name="class_no" id="D66D92CB-43FC-7484-1292-BFCE74D8AA16">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78A81203-4CC7-35A4-5A87-8ACBDC557A18" referredColumn="720418DD-6009-D337-3058-72CCC485440B"/>
+</associations>
+</Column>
+<Column name="center_id" id="D209064E-63E0-876E-3E1F-A0D4D4856FAA">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="78A81203-4CC7-35A4-5A87-8ACBDC557A18" referredColumn="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="021B0470-420A-9F0B-FC14-A8B03B858D8E" name="STAFF_CLASS_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05ACCA94-B42F-CD7D-1AF2-8359FFB96161"/>
+<colUsage columnID="D66D92CB-43FC-7484-1292-BFCE74D8AA16"/>
+<colUsage columnID="D209064E-63E0-876E-3E1F-A0D4D4856FAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B5BED752-DAF0-CD71-CB3A-3E8BA3403F60" name="STAFF_CLASS_STAFF_FK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>285F62B3-9605-E10C-0C82-A6E98C0FEECF</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="05ACCA94-B42F-CD7D-1AF2-8359FFB96161"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="ED6E6617-DF74-5346-B6F8-5883C22CDB41" name="STAFF_CLASS_CLASS_FK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>285F62B3-9605-E10C-0C82-A6E98C0FEECF</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D66D92CB-43FC-7484-1292-BFCE74D8AA16"/>
+<colUsage columnID="D209064E-63E0-876E-3E1F-A0D4D4856FAA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

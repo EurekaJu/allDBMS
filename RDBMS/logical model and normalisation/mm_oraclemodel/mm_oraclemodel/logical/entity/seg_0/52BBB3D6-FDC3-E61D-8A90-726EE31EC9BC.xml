@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="52BBB3D6-FDC3-E61D-8A90-726EE31EC9BC" name="SESSION">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:53:45 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="sess_date" id="FD625766-2FAA-170D-B7A8-B76A447B698D">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:54:48 UTC</createdTime>
+<commentInRDBMS><![CDATA[whether the member attend the class]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="memberatd_no" id="3C6D4AF9-405C-1DC8-62BD-C685382CC514">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:52:18 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance report number (surrogate key)]]></commentInRDBMS>
+<generatorID>EE6A4011-575E-DCC2-5E3E-0744C77C0640</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>97AF439C-1C9A-B7B4-DCCF-2352C90602AA</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="89B8F601-E03B-B72C-6DA9-C99C6DC4741D" name="SESSION PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:54:03 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3C6D4AF9-405C-1DC8-62BD-C685382CC514</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

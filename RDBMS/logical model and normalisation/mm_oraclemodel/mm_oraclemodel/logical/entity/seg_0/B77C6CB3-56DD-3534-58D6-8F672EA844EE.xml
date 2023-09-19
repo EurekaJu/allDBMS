@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B77C6CB3-56DD-3534-58D6-8F672EA844EE" name="ASSESSMENT">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:42:50 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="member_id" id="29991D21-28D1-2738-BBD4-5AE39C5A8DC7">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:15:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>14377B30-11A2-0D71-D9DD-59E50433078B</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<referedAttribute>415EF037-D049-92CF-7518-73617BB34FCD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assess_date" id="B135318D-33D6-BC9E-8361-CA7657BA48DF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:43:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date member take the assessment]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assess_weight" id="0814764D-824E-729C-2488-C9E4E2FD9092">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:44:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's weight in kg]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assess_blood" id="13158D46-AFD6-2C75-170B-D947CAF52BE4">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:45:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[the blood pressure of the member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assess_bmi" id="F94A6C15-BB90-829F-7D19-F97E3021E532">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:46:21 UTC</createdTime>
+<commentInRDBMS><![CDATA[the bmi record of the member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="assess_vo" id="B0B5D8B7-6D5B-2E08-3E9F-3F2ABE852DD3">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:46:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[the VO2Max record of the member]]></commentInRDBMS>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D537F3DA-0FAF-59C4-9A55-9E907C28B479" name="ASSESSMENT PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-16 23:43:29 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B135318D-33D6-BC9E-8361-CA7657BA48DF</attributeRef>
+<attributeRef>29991D21-28D1-2738-BBD4-5AE39C5A8DC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

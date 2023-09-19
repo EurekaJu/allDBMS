@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="182B8A54-2DD0-0ADD-5FEF-4201285A2C08" name="FACILITY">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>F72A8B50-E5ED-015B-C6E8-AB1DEC8F7066</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="center_id" id="F4AF72D6-73E2-4BF5-E87A-39DA08E9E670">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>9D5706DA-8555-EEBF-9F07-BB7C4F951CDB</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="386CD166-35EA-4C73-3238-9825C0C5D381" referredColumn="A4533529-7D99-42B1-E18A-C997700CFE54"/>
+</associations>
+</Column>
+<Column name="facility_no" id="641DF116-6B06-C07D-DFAA-DBF5CFE2B99A">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility room number]]></commentInRDBMS>
+<generatorID>4855A625-FFD3-3ABA-8016-A968586575B1</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facility_name" id="290BF910-47B1-D5FF-CD29-C15195FA965F">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[facility name]]></commentInRDBMS>
+<generatorID>EFD103FD-5FEC-80E9-A1C4-04825EFECF16</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facility_desc" id="11D227B6-3838-C832-10B9-4D9B7E4BFBE9">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the description of the facility]]></commentInRDBMS>
+<generatorID>C6616696-116E-4D96-7CF7-063E058678D6</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="facility_capa" id="4AE3F8A0-B21C-726C-CEAD-7680271EFB7A">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the number of participants it can accommodate]]></commentInRDBMS>
+<generatorID>3B399BAC-0174-B113-48D8-862BB9AE3286</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4F0494A6-92D7-8631-AAE3-AA9BFC6C2525" name="FACILITY_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>7BC83E9A-6B9A-B810-F2DF-A126C5F697F7</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="641DF116-6B06-C07D-DFAA-DBF5CFE2B99A"/>
+<colUsage columnID="F4AF72D6-73E2-4BF5-E87A-39DA08E9E670"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36FA83BB-C9C2-695C-A0D4-C3B3AE0293F8" name="CENTER_FACILITY">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>6D2D89FC-BC38-CABC-1FB7-48032F3D8AC4</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4AF72D6-73E2-4BF5-E87A-39DA08E9E670"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

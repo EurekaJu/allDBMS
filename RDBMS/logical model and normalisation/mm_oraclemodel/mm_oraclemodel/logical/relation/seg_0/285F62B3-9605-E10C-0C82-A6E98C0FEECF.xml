@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="STAFF_CLASS" directorySegmentName="seg_0" id="285F62B3-9605-E10C-0C82-A6E98C0FEECF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 00:00:34 UTC</createdTime>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<engineerTo>
+<item key="EA85346F-F8B4-23EC-7A37-F149F6590BC7" value="true"/>
+</engineerTo>
+<sourcePk>11C0DA89-74C4-5E8D-B412-3AEA33AB1221</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>runs</nameOnSource>
+<nameOnTarget> </nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>B344A7D9-5FB8-CDD1-E4C1-D2ACEFE134D6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>541211D0-172A-C06D-8EA0-573B01F2A396</targetEntity>
+<transferable>true</transferable>
+</Relation>

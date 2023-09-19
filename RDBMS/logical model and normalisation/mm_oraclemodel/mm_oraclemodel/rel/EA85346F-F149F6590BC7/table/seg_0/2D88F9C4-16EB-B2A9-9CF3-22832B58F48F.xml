@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D88F9C4-16EB-B2A9-9CF3-22832B58F48F" name="MEMBER">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>56BE2643-6DA9-DFF1-3FA7-C6F086BC6FA0</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="member_id" id="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>415EF037-D049-92CF-7518-73617BB34FCD</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_fname" id="D1AA79A8-19C8-2393-A7AB-B423FE7D9C33">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's first name]]></commentInRDBMS>
+<generatorID>16140EA6-5B07-A603-AD8D-AE4043A5A8D8</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_lname" id="A9C10BCB-33E6-6FDE-F116-3159C0F09626">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's last name]]></commentInRDBMS>
+<generatorID>24445656-EE1D-6709-70C8-C7348DB3F941</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_addr" id="BA7E5B48-31F2-70E2-F0DC-AB7CAD688F4F">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's address]]></commentInRDBMS>
+<generatorID>10632060-4A6D-1B07-5D1C-487D133D7110</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_phone" id="B7CDC212-42EC-46A2-F185-0D77F58C23AC">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member's phone number]]></commentInRDBMS>
+<generatorID>D5ECE403-D03A-4C08-9D3C-CA02CB53D87A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_date" id="62FC9DDB-6837-6816-054D-D3525174D3DF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date which the mumber joined the movement]]></commentInRDBMS>
+<generatorID>9B0DBD83-DA88-3942-98ED-E1FF8D504FA5</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="member_id2" id="B8A97EBD-47E1-417D-C6BC-F595ED4373F1">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>55C8AF80-D963-2DD4-D6D7-A3C0B1A814C9</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="35381921-2BFB-C7B2-48D7-52609D0CCBFF" referredColumn="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86"/>
+</associations>
+</Column>
+<Column name="center_id" id="1CF7AD2A-A745-764B-14D1-FCD0F05C91E3">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>BBD7464F-A90B-A8E4-C813-2989C7CA9048</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="69B31400-1BA8-E479-829C-8CF4C564D532" referredColumn="A4533529-7D99-42B1-E18A-C997700CFE54"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="05139800-EA1D-4607-0732-CBEF9C0286C5" name="MEMBER_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>AE9A0EED-8727-4457-8227-7AE7E1848921</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B6A02B6-46B1-7300-C978-764006A22553" name="MEMBER_CENTER">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>9373BF99-A37F-624D-0628-017E1D8400CA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CF7AD2A-A745-764B-14D1-FCD0F05C91E3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="433A8900-2FDA-FEA0-2C01-3AF6ABB9CED1" name="MEMBER_MEMBER">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>E13BE940-59EE-1D9E-2A63-8A2D435A166D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B8A97EBD-47E1-417D-C6BC-F595ED4373F1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

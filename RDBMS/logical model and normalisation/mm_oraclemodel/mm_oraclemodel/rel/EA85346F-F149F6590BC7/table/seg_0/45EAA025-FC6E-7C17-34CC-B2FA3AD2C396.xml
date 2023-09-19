@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45EAA025-FC6E-7C17-34CC-B2FA3AD2C396" name="SESSION">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>52BBB3D6-FDC3-E61D-8A90-726EE31EC9BC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="sess_date" id="AE9672D7-94DE-E313-0490-1A12AC21DF45">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[whether the member attend the class]]></commentInRDBMS>
+<generatorID>FD625766-2FAA-170D-B7A8-B76A447B698D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="memberatd_no" id="CA9AB960-6750-59CF-C4B9-4349BA88932D">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[attendance report number (surrogate key)]]></commentInRDBMS>
+<generatorID>3C6D4AF9-405C-1DC8-62BD-C685382CC514</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33C56E51-FEC5-65EC-C022-A0340848A8F2" referredColumn="D12A113F-2A30-4254-FB1E-EC73A5C9F6B1"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CBB86CB1-FBC4-E340-46F5-8D3D0B142C2B" name="SESSION_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>89B8F601-E03B-B72C-6DA9-C99C6DC4741D</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA9AB960-6750-59CF-C4B9-4349BA88932D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EAA3141-EC62-46E9-9528-1573A1964191" name="MEMBER_ATTENDANCE_SEESION">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>EE6A4011-575E-DCC2-5E3E-0744C77C0640</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA9AB960-6750-59CF-C4B9-4349BA88932D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

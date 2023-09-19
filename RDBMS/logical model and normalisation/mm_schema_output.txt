@@ -1,0 +1,866 @@
+SQL> 
+SQL> 
+SQL> DROP TABLE assessment CASCADE CONSTRAINTS;
+
+Error starting at line : 12 in command -
+DROP TABLE assessment CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE center CASCADE CONSTRAINTS;
+
+Error starting at line : 14 in command -
+DROP TABLE center CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE class CASCADE CONSTRAINTS;
+
+Error starting at line : 16 in command -
+DROP TABLE class CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE class_staff CASCADE CONSTRAINTS;
+
+Error starting at line : 18 in command -
+DROP TABLE class_staff CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE facility CASCADE CONSTRAINTS;
+
+Error starting at line : 20 in command -
+DROP TABLE facility CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE member CASCADE CONSTRAINTS;
+
+Error starting at line : 22 in command -
+DROP TABLE member CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE member_attendance CASCADE CONSTRAINTS;
+
+Error starting at line : 24 in command -
+DROP TABLE member_attendance CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE payment CASCADE CONSTRAINTS;
+
+Error starting at line : 26 in command -
+DROP TABLE payment CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE "SESSION" CASCADE CONSTRAINTS;
+
+Error starting at line : 28 in command -
+DROP TABLE "SESSION" CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE staff CASCADE CONSTRAINTS;
+
+Error starting at line : 30 in command -
+DROP TABLE staff CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> DROP TABLE staff_class CASCADE CONSTRAINTS;
+
+Error starting at line : 32 in command -
+DROP TABLE staff_class CASCADE CONSTRAINTS
+Error report -
+ORA-00942: table or view does not exist
+00942. 00000 -  "table or view does not exist"
+*Cause:    
+*Action:
+SQL> 
+SQL> -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
+SQL> 
+SQL> -- predefined type, no DDL - XMLTYPE
+SQL> 
+SQL> CREATE TABLE assessment (
+  2      member_id      NUMBER(7) NOT NULL,
+  3      assess_date    DATE NOT NULL,
+  4      assess_weight  NUMBER(4) NOT NULL,
+  5      assess_blood   VARCHAR2(20) NOT NULL,
+  6      assess_bmi     VARCHAR2(5) NOT NULL,
+  7      assess_vo      VARCHAR2(5) NOT NULL
+  8  );
+
+Table ASSESSMENT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.member_id IS
+  2      'member id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.assess_date IS
+  2      'the date member take the assessment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.assess_weight IS
+  2      'member''s weight in kg';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.assess_blood IS
+  2      'the blood pressure of the member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.assess_bmi IS
+  2      'the bmi record of the member';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN assessment.assess_vo IS
+  2      'the VO2Max record of the member';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE assessment ADD CONSTRAINT assessment_pk PRIMARY KEY ( assess_date,
+  2                                                                    member_id );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> CREATE TABLE center (
+  2      center_id      NUMBER(7) NOT NULL,
+  3      center_name    VARCHAR2(50) NOT NULL,
+  4      center_phone   CHAR(10) NOT NULL,
+  5      center_street  VARCHAR2(50) NOT NULL,
+  6      center_town    VARCHAR2(50) NOT NULL,
+  7      center_post    CHAR(5)
+  8  );
+
+Table CENTER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN center.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN center.center_name IS
+  2      'center name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN center.center_street IS
+  2      'street of the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN center.center_town IS
+  2      'town of the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN center.center_post IS
+  2      'postcode of the center';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE center ADD CONSTRAINT center_pk PRIMARY KEY ( center_id );
+
+Table CENTER altered.
+
+SQL> 
+SQL> CREATE TABLE class (
+  2      center_id     NUMBER(7) NOT NULL,
+  3      class_no      NUMBER(7) NOT NULL,
+  4      class_start   DATE NOT NULL,
+  5      class_cost    CHAR(5) NOT NULL,
+  6      class_maxno   NUMBER(3),
+  7      class_sessno  NUMBER(3) NOT NULL,
+  8      class_desc    VARCHAR2(70),
+  9      class_type    VARCHAR2(50) NOT NULL,
+ 10      class_gender  CHAR(5) NOT NULL,
+ 11      class_mins    NUMBER(4) NOT NULL,
+ 12      facility_no   NUMBER(7) NOT NULL,
+ 13      center_id2    NUMBER(7) NOT NULL
+ 14  );
+
+Table CLASS created.
+
+SQL> 
+SQL> ALTER TABLE class
+  2      ADD CONSTRAINT chk_class_gender CHECK ( class_gender IN ( 'F', 'M', 'N' ) );
+
+Table CLASS altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_no IS
+  2      'class number of the class in the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_start IS
+  2      'start date and time of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_cost IS
+  2      'the cost of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_maxno IS
+  2      'the maximum number of the people attend this class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_sessno IS
+  2      'the session number of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_desc IS
+  2      'Class decription';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_type IS
+  2      'the type of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_gender IS
+  2      'whether this class is gender specific ''M'' for male ''F'' for female ''M'' for unrestricted';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.class_mins IS
+  2      'the duration of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.facility_no IS
+  2      'facility room number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class.center_id2 IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE class ADD CONSTRAINT class_pk PRIMARY KEY ( class_no,
+  2                                                          center_id );
+
+Table CLASS altered.
+
+SQL> 
+SQL> CREATE TABLE class_staff (
+  2      cstaff_leader  VARCHAR2(5) NOT NULL,
+  3      staff_id       NUMBER(7) NOT NULL,
+  4      class_no       NUMBER(7) NOT NULL,
+  5      center_id      NUMBER(7) NOT NULL,
+  6      cstaff_no      NUMBER(7) NOT NULL
+  7  );
+
+Table CLASS_STAFF created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staff.cstaff_leader IS
+  2      'whether the staff is the leader of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staff.staff_id IS
+  2      'the id number of the staff';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staff.class_no IS
+  2      'class number of the class in the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staff.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN class_staff.cstaff_no IS
+  2      'the arrangement of the staff in the class (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE class_staff ADD CONSTRAINT class_staff_pk PRIMARY KEY ( cstaff_no );
+
+Table CLASS_STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE class_staff
+  2      ADD CONSTRAINT class_staff_nk UNIQUE ( cstaff_leader,
+  3                                             staff_id,
+  4                                             class_no,
+  5                                             center_id );
+
+Table CLASS_STAFF altered.
+
+SQL> 
+SQL> CREATE TABLE facility (
+  2      center_id      NUMBER(7) NOT NULL,
+  3      facility_no    NUMBER(7) NOT NULL,
+  4      facility_name  VARCHAR2(20) NOT NULL,
+  5      facility_desc  VARCHAR2(50),
+  6      facility_capa  NUMBER(3) NOT NULL
+  7  );
+
+Table FACILITY created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.facility_no IS
+  2      'facility room number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.facility_name IS
+  2      'facility name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.facility_desc IS
+  2      'the description of the facility';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN facility.facility_capa IS
+  2      'the number of participants it can accommodate';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE facility ADD CONSTRAINT facility_pk PRIMARY KEY ( facility_no,
+  2                                                                center_id );
+
+Table FACILITY altered.
+
+SQL> 
+SQL> CREATE TABLE member (
+  2      member_id     NUMBER(7) NOT NULL,
+  3      member_fname  VARCHAR2(20) NOT NULL,
+  4      member_lname  VARCHAR2(20) NOT NULL,
+  5      member_addr   VARCHAR2(50) NOT NULL,
+  6      member_phone  CHAR(10) NOT NULL,
+  7      member_date   DATE NOT NULL,
+  8      member_id2    NUMBER(7),
+  9      center_id     NUMBER(7) NOT NULL
+ 10  );
+
+Table MEMBER created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_id IS
+  2      'member id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_fname IS
+  2      'member''s first name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_lname IS
+  2      'member''s last name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_addr IS
+  2      'member''s address';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_phone IS
+  2      'member''s phone number';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_date IS
+  2      'the date which the mumber joined the movement';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.member_id2 IS
+  2      'member id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE member ADD CONSTRAINT member_pk PRIMARY KEY ( member_id );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> CREATE TABLE member_attendance (
+  2      payment_date     DATE NOT NULL,
+  3      memberatd_total  NUMBER(3) NOT NULL,
+  4      member_id        NUMBER(7) NOT NULL,
+  5      class_no         NUMBER(7) NOT NULL,
+  6      center_id        NUMBER(7) NOT NULL,
+  7      memberatd_no     NUMBER(7) NOT NULL
+  8  );
+
+Table MEMBER_ATTENDANCE created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.payment_date IS
+  2      'the date the member make the payment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.memberatd_total IS
+  2      'the member''s total attendance of the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.member_id IS
+  2      'member id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.class_no IS
+  2      'class number of the class in the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN member_attendance.memberatd_no IS
+  2      'attendance report number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE member_attendance ADD CONSTRAINT member_attendance_pk PRIMARY KEY ( memberatd_no );
+
+Table MEMBER_ATTENDANCE altered.
+
+SQL> 
+SQL> ALTER TABLE member_attendance
+  2      ADD CONSTRAINT member_attendance_nk UNIQUE ( payment_date,
+  3                                                   memberatd_total,
+  4                                                   member_id,
+  5                                                   class_no,
+  6                                                   center_id );
+
+Table MEMBER_ATTENDANCE altered.
+
+SQL> 
+SQL> CREATE TABLE payment (
+  2      member_id     NUMBER(7) NOT NULL,
+  3      payment_date  DATE NOT NULL,
+  4      payment_no    NUMBER(4) NOT NULL
+  5  );
+
+Table PAYMENT created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.member_id IS
+  2      'member id';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.payment_date IS
+  2      'the date member make the payment';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN payment.payment_no IS
+  2      'payment number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE payment ADD CONSTRAINT payment_pk PRIMARY KEY ( payment_no );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> ALTER TABLE payment ADD CONSTRAINT payment_nk UNIQUE ( member_id,
+  2                                                         payment_date );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> CREATE TABLE "SESSION" (
+  2      sess_date     VARCHAR2(5) NOT NULL,
+  3      memberatd_no  NUMBER(7) NOT NULL
+  4  );
+
+Table "SESSION" created.
+
+SQL> 
+SQL> COMMENT ON COLUMN "SESSION".sess_date IS
+  2      'whether the member attend the class';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN "SESSION".memberatd_no IS
+  2      'attendance report number (surrogate key)';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE "SESSION" ADD CONSTRAINT session_pk PRIMARY KEY ( memberatd_no );
+
+Table "SESSION" altered.
+
+SQL> 
+SQL> CREATE TABLE staff (
+  2      staff_id     NUMBER(7) NOT NULL,
+  3      staff_fname  VARCHAR2(20) NOT NULL,
+  4      staff_lname  VARCHAR2(20) NOT NULL,
+  5      staff_phone  NUMBER(10) NOT NULL,
+  6      staff_date   DATE NOT NULL,
+  7      staff_role   CHAR 
+  8  /*  WARNING: CHAR size not specified */
+  9       NOT NULL,
+ 10      staff_faid   VARCHAR2(5) NOT NULL,
+ 11      center_id    NUMBER(7) NOT NULL
+ 12  );
+
+Table STAFF created.
+
+SQL> 
+SQL> ALTER TABLE staff
+  2      ADD CONSTRAINT chk_staff_role CHECK ( staff_role IN ( 'A', 'C', 'D', 'M', 'P',
+  3                                                            'S', 'T' ) );
+
+Table STAFF altered.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_id IS
+  2      'the id number of the staff';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_fname IS
+  2      'staff''s first name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_lname IS
+  2      'staff''s last name';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_phone IS
+  2      'phone number of the staff';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_date IS
+  2      'the date the staff started at the center';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_role IS
+  2      'Administration (A) Cleaner (C) Instructor Dry (D) Instructor Pool (P) Manager (only one per centre) (M) Sales (S) Security (T)';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.staff_faid IS
+  2      'whether the staff is first aid certified';
+
+Comment created.
+
+SQL> 
+SQL> COMMENT ON COLUMN staff.center_id IS
+  2      'unique center id';
+
+Comment created.
+
+SQL> 
+SQL> ALTER TABLE staff ADD CONSTRAINT staff_pk PRIMARY KEY ( staff_id );
+
+Table STAFF altered.
+
+SQL> 
+SQL> CREATE TABLE staff_class (
+  2      staff_id   NUMBER(7) NOT NULL,
+  3      class_no   NUMBER(7) NOT NULL,
+  4      center_id  NUMBER(7) NOT NULL
+  5  );
+
+Table STAFF_CLASS created.
+
+SQL> 
+SQL> ALTER TABLE staff_class
+  2      ADD CONSTRAINT staff_class_pk PRIMARY KEY ( staff_id,
+  3                                                  class_no,
+  4                                                  center_id );
+
+Table STAFF_CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE class
+  2      ADD CONSTRAINT center_class FOREIGN KEY ( center_id )
+  3          REFERENCES center ( center_id );
+
+Table CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE facility
+  2      ADD CONSTRAINT center_facility FOREIGN KEY ( center_id )
+  3          REFERENCES center ( center_id );
+
+Table FACILITY altered.
+
+SQL> 
+SQL> ALTER TABLE class_staff
+  2      ADD CONSTRAINT class_staff_class FOREIGN KEY ( class_no,
+  3                                                     center_id )
+  4          REFERENCES class ( class_no,
+  5                             center_id );
+
+Table CLASS_STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE class
+  2      ADD CONSTRAINT facility FOREIGN KEY ( facility_no,
+  3                                            center_id2 )
+  4          REFERENCES facility ( facility_no,
+  5                                center_id );
+
+Table CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE assessment
+  2      ADD CONSTRAINT member_assessment FOREIGN KEY ( member_id )
+  3          REFERENCES member ( member_id );
+
+Table ASSESSMENT altered.
+
+SQL> 
+SQL> ALTER TABLE member_attendance
+  2      ADD CONSTRAINT member_attendance_class FOREIGN KEY ( class_no,
+  3                                                           center_id )
+  4          REFERENCES class ( class_no,
+  5                             center_id );
+
+Table MEMBER_ATTENDANCE altered.
+
+SQL> 
+SQL> ALTER TABLE member_attendance
+  2      ADD CONSTRAINT member_attendance_member FOREIGN KEY ( member_id )
+  3          REFERENCES member ( member_id );
+
+Table MEMBER_ATTENDANCE altered.
+
+SQL> 
+SQL> ALTER TABLE "SESSION"
+  2      ADD CONSTRAINT member_attendance_seesion FOREIGN KEY ( memberatd_no )
+  3          REFERENCES member_attendance ( memberatd_no );
+
+Table "SESSION" altered.
+
+SQL> 
+SQL> ALTER TABLE member
+  2      ADD CONSTRAINT member_center FOREIGN KEY ( center_id )
+  3          REFERENCES center ( center_id );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> ALTER TABLE member
+  2      ADD CONSTRAINT member_member FOREIGN KEY ( member_id2 )
+  3          REFERENCES member ( member_id );
+
+Table MEMBER altered.
+
+SQL> 
+SQL> ALTER TABLE payment
+  2      ADD CONSTRAINT member_payment FOREIGN KEY ( member_id )
+  3          REFERENCES member ( member_id );
+
+Table PAYMENT altered.
+
+SQL> 
+SQL> ALTER TABLE staff
+  2      ADD CONSTRAINT staff_center FOREIGN KEY ( center_id )
+  3          REFERENCES center ( center_id );
+
+Table STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE staff_class
+  2      ADD CONSTRAINT staff_class_class_fk FOREIGN KEY ( class_no,
+  3                                                        center_id )
+  4          REFERENCES class ( class_no,
+  5                             center_id );
+
+Table STAFF_CLASS altered.
+
+SQL> 
+SQL> ALTER TABLE class_staff
+  2      ADD CONSTRAINT staff_class_staff FOREIGN KEY ( staff_id )
+  3          REFERENCES staff ( staff_id );
+
+Table CLASS_STAFF altered.
+
+SQL> 
+SQL> ALTER TABLE staff_class
+  2      ADD CONSTRAINT staff_class_staff_fk FOREIGN KEY ( staff_id )
+  3          REFERENCES staff ( staff_id );
+
+Table STAFF_CLASS altered.
+
+SQL> 
+SQL> 
+SQL> 
+SQL> -- Oracle SQL Developer Data Modeler Summary Report: 
+SQL> -- 
+SQL> -- CREATE TABLE                            11
+SQL> -- CREATE INDEX                             0
+SQL> -- ALTER TABLE                             31
+SQL> -- CREATE VIEW                              0
+SQL> -- ALTER VIEW                               0
+SQL> -- CREATE PACKAGE                           0
+SQL> -- CREATE PACKAGE BODY                      0
+SQL> -- CREATE PROCEDURE                         0
+SQL> -- CREATE FUNCTION                          0
+SQL> -- CREATE TRIGGER                           0
+SQL> -- ALTER TRIGGER                            0
+SQL> -- CREATE COLLECTION TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE                   0
+SQL> -- CREATE STRUCTURED TYPE BODY              0
+SQL> -- CREATE CLUSTER                           0
+SQL> -- CREATE CONTEXT                           0
+SQL> -- CREATE DATABASE                          0
+SQL> -- CREATE DIMENSION                         0
+SQL> -- CREATE DIRECTORY                         0
+SQL> -- CREATE DISK GROUP                        0
+SQL> -- CREATE ROLE                              0
+SQL> -- CREATE ROLLBACK SEGMENT                  0
+SQL> -- CREATE SEQUENCE                          0
+SQL> -- CREATE MATERIALIZED VIEW                 0
+SQL> -- CREATE MATERIALIZED VIEW LOG             0
+SQL> -- CREATE SYNONYM                           0
+SQL> -- CREATE TABLESPACE                        0
+SQL> -- CREATE USER                              0
+SQL> -- 
+SQL> -- DROP TABLESPACE                          0
+SQL> -- DROP DATABASE                            0
+SQL> -- 
+SQL> -- REDACTION POLICY                         0
+SQL> -- TSDP POLICY                              0
+SQL> -- 
+SQL> -- ORDS DROP SCHEMA                         0
+SQL> -- ORDS ENABLE SCHEMA                       0
+SQL> -- ORDS ENABLE OBJECT                       0
+SQL> -- 
+SQL> -- ERRORS                                   0
+SQL> -- WARNINGS                                 1
+SQL> SPOOL off

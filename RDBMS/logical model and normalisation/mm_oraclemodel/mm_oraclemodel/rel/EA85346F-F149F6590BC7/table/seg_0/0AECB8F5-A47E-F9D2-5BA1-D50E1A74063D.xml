@@ -1,0 +1,140 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0AECB8F5-A47E-F9D2-5BA1-D50E1A74063D" name="CLASS_STAFF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>29B9763E-2290-9DBA-44C0-F01972CF569E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="cstaff_leader" id="9E385DC1-E26C-103E-9441-A37F30341DF4">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[whether the staff is the leader of the class]]></commentInRDBMS>
+<generatorID>5B887AE9-484B-8554-A51A-A731E2F88F6E</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="staff_id" id="F6C34B93-4CCC-0492-B179-A970D5D70799">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the id number of the staff]]></commentInRDBMS>
+<generatorID>EE54C4B4-673E-8D5F-FD25-9AB9CE86F9AA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0D203C4C-5741-FA1F-EB62-3F05AC6DE234" referredColumn="591B7E7E-67E8-C199-8877-41C7C7212C75"/>
+</associations>
+</Column>
+<Column name="class_no" id="77FDB53E-4BE1-8D73-6A64-66F57D5A91C3">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[class number of the class in the center]]></commentInRDBMS>
+<generatorID>E44E9A84-98A7-8D0B-1E4D-6B20636D39FE</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3F8B621D-3924-6637-0E93-A750A7D00275" referredColumn="720418DD-6009-D337-3058-72CCC485440B"/>
+</associations>
+</Column>
+<Column name="center_id" id="64BD2074-226F-3C03-7597-BC2ECD7B9DC9">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[unique center id]]></commentInRDBMS>
+<generatorID>63273340-E910-9422-0AC9-3B8E9789B0DC</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3F8B621D-3924-6637-0E93-A750A7D00275" referredColumn="DA0C4E01-1F3D-0C3D-0187-3E0B5B6DA9C0"/>
+</associations>
+</Column>
+<Column name="cstaff_no" id="2D481C28-A2A6-7C58-81BE-174F3BD5DA1E">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the arrangement of the staff in the class (surrogate key)]]></commentInRDBMS>
+<generatorID>5F56E1A1-B17F-D26F-1096-93318877F39A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,7,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C797E782-1932-9882-F02B-766D60D5775A" name="CLASS_STAFF_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>2C91040E-B97B-1759-7223-7C28CFDFD914</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2D481C28-A2A6-7C58-81BE-174F3BD5DA1E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BADA61F6-82EB-4C32-CD82-120A553E83E6" name="CLASS_STAFF_NK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>62632666-15B6-494B-75A7-1AEEF3B2D334</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9E385DC1-E26C-103E-9441-A37F30341DF4"/>
+<colUsage columnID="F6C34B93-4CCC-0492-B179-A970D5D70799"/>
+<colUsage columnID="77FDB53E-4BE1-8D73-6A64-66F57D5A91C3"/>
+<colUsage columnID="64BD2074-226F-3C03-7597-BC2ECD7B9DC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="192D2D4B-022D-BE9D-8133-EA5FC0CE38CD" name="CLASS_STAFF_CLASS">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>0DCD269F-1E16-CED5-D5FF-3FC413159E2A</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77FDB53E-4BE1-8D73-6A64-66F57D5A91C3"/>
+<colUsage columnID="64BD2074-226F-3C03-7597-BC2ECD7B9DC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="010A9632-DBF2-1883-77B6-A9404275338D" name="STAFF_CLASS_STAFF">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>7B2C537B-4A20-EEE6-F140-43A780B8FF88</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6C34B93-4CCC-0492-B179-A970D5D70799"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

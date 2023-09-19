@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DD18BD0E-2D15-6716-EF2C-C0F8417A4277" name="PAYMENT">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>91219CE1-2855-A2C6-140F-D2F978CF9A04</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="member_id" id="B0CF323D-2456-69BD-2BEB-F4743DF93858">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[member id]]></commentInRDBMS>
+<generatorID>6A50B84E-A194-545C-957C-B5517E0C5C99</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>7</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6BBA44E-BD57-4BB4-F210-3A286C0B118D" referredColumn="A5A0A4C0-4F8B-08C9-2058-0E6B4CA7CC86"/>
+</associations>
+</Column>
+<Column name="payment_date" id="18967B77-362C-8CEA-E54A-944E667C1982">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[the date member make the payment]]></commentInRDBMS>
+<generatorID>15B151AD-6475-474F-E375-19B85BDE1C42</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="payment_no" id="6CDD4170-A3FB-FE6D-1134-EDB88BEBF813">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<commentInRDBMS><![CDATA[payment number (surrogate key)]]></commentInRDBMS>
+<generatorID>18C2C3D4-592A-9A59-8E8A-F559F3575990</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="29A7C934-0C1A-B5E7-E3C4-2E917E28047F" name="PAYMENT_PK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>7EE413E7-B0C8-2A0C-559F-92CE17F950DF</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6CDD4170-A3FB-FE6D-1134-EDB88BEBF813"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4F61A051-3340-2392-5739-163972D54033" name="PAYMENT_NK">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>A29FDED0-4641-0FB0-C3C5-408F822763DA</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0CF323D-2456-69BD-2BEB-F4743DF93858"/>
+<colUsage columnID="18967B77-362C-8CEA-E54A-944E667C1982"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C8C59029-AD61-9584-5F48-34A30456F165" name="MEMBER_PAYMENT">
+<createdBy>ajuu0001</createdBy>
+<createdTime>2021-09-17 01:01:50 UTC</createdTime>
+<generatorID>D597F320-F699-BE48-B648-2C200520FEE2</generatorID>
+<ownerDesignName>mm_oraclemodel</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B0CF323D-2456-69BD-2BEB-F4743DF93858"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
